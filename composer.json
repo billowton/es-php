@@ -1,0 +1,22 @@
+{
+    "name": "es-php",
+    "description": "elasticsearch php 封装",
+    "type": "project",
+    "license": "Apache License 2.0",
+    "homepage": "https://billowton.com",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^7.0",
+        "elasticsearch/elasticsearch": "~5.0"
+    },
+    "config": {
+        "vendor-dir": "vendor"
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
+    }
+}
