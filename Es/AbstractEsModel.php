@@ -107,7 +107,7 @@ abstract class AbstractEsModel
      */
     public function setFilter($filedName, $value, $exclude = false)
     {
-        if (in_array($value,[null,''])) { //过滤掉无效的查询
+        if($value===''||$value===null){//过滤掉无效的查询
             return $this;
         }
 
