@@ -112,7 +112,7 @@ abstract class AbstractEsModel
         }
 
         if (is_array($value)) {
-            return $this->setFilterArray($filedName, $value);
+            return $this->setFilterArray($filedName, $value,$exclude);
         } else {
             return $this->doFilter($filedName, $value, $exclude);
         }
