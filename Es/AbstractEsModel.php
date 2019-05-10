@@ -103,10 +103,16 @@ abstract class AbstractEsModel
     /**
      * @param $filedName
      * @param $value
+     * @param bool $exclude
+     * @param bool $useLikeMode 类似mysql的 like 模式
+     * @return $this|AbstractEsModel
      * 基本查询
      */
-    public function setFilter($filedName, $value, $exclude = false)
+    public function setFilter($filedName, $value, $exclude = false,$useLikeMode=false)
     {
+        /*  if (in_array($value,[null,''])) { //过滤掉无效的查询
+              return $this;
+          }*/
         if($value===''||$value===null){//过滤掉无效的查询
             return $this;
         }
@@ -114,7 +120,13 @@ abstract class AbstractEsModel
         if (is_array($value)) {
             return $this->setFilterArray($filedName, $value,$exclude);
         } else {
-            return $this->doFilter($filedName, $value, $exclude);
+            if($useLikeMode){
+                $value = '*'.$value.'*';
+                return $this->doFilter($filedName, $value, $exclude,'wildcard');
+            }else{
+                return $this->doFilter($filedName, $value, $exclude);
+            }
+
         }
 
 
@@ -162,7 +174,7 @@ abstract class AbstractEsModel
      */
     public function setMultiFieldsFilter(array $fields, $keyword)
     {
-        return $this->doFilter(null, ['query' => $keyword, 'fields' => $fields], 'multi_match');
+        return $this->doFilter(null, ['query' => $keyword, 'fields' => $fields], false,'multi_match');
 
     }
 
@@ -410,6 +422,8 @@ abstract class AbstractEsModel
     }
 
 
+
+
     /**
      * @param $params
      * @return array
@@ -435,5 +449,30 @@ abstract class AbstractEsModel
         }
     }
 
+    public function deleteById($id)
+    {
+        if(empty($params['index'])){
+            $params['index'] = $this->_index;
+        }
+        if(empty($params['type'])){
+            $params['type'] = $this->_type;
+        }
+
+        $params['id'] = $id;
+
+
+        try {
+            $this->client->delete($params);
+            return true;
+        } catch (\Exception $e) {
+            echo $e->getMessage();
+            exit;
+
+            //  return [];
+        }
+
+    }
+
 
 }
+
