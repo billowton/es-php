@@ -166,18 +166,25 @@ abstract class AbstractEsModel
         return $this->doFilter($filedName, $arrayVal, $exclude, 'match_array');
     }
 
-
     /**
      * @param array $fields
      * @param $keyword
      * 多字段查询   适用于 同一个值 作用于多个字段
      */
-    public function setMultiFieldsFilter(array $fields, $keyword)
+    public function setMultiFieldsFilter(array $fields, $keyword,$useLikeMode=false)
     {
-        return $this->doFilter(null, ['query' => $keyword, 'fields' => $fields], false,'multi_match');
+        if($useLikeMode===false){
+            return $this->doFilter(null, ['query' => $keyword, 'fields' => $fields], false,'multi_match');
+        }else{
+            $valueArr = [];
+            foreach ($fields as $field){
+                $valueArr[] = ['wildcard'=>[$field=>'*'.$keyword.'*']];
+            }
+            return $this->doFilter(null, $valueArr, false,'multi_match_like');
+        }
+
 
     }
-
 
     private function doFilter($filedName, $value, $exclude = false, $mode = 'match')
     {
@@ -350,6 +357,20 @@ abstract class AbstractEsModel
                     $queryBody[$qm]['bool']['must'][] = [
                         'multi_match' => $item['value']
                     ];
+                    break;
+                case 'multi_match_like':
+//
+                    if ($item['exclude'] === true) {
+                        $sF = 'must_not';
+                    } else {
+                        $sF = 'must';
+                    }
+                    $tmpQ = [];
+                    foreach ($item['value'] as $value) {
+                        $tmpQ['bool']['should'][] = $value;
+                    }
+                    $queryBody[$qm]['bool'][$sF][] = $tmpQ;
+
                     break;
                 case 'match_array':
                     if ($item['exclude'] === true) {
