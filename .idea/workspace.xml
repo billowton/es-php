@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1943749d-bb6e-4f8c-91f6-b43b7b9c9385" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Es/AbstractEsModel.php" afterPath="$PROJECT_DIR$/Es/AbstractEsModel.php" />
       <change beforePath="$PROJECT_DIR$/Es/AbstractEsRes.php" afterPath="$PROJECT_DIR$/Es/AbstractEsRes.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="demo.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="demo.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/demo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="342">
+              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -41,18 +39,18 @@
       <file leaf-file-name="AbstractEsRes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Es/AbstractEsRes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="676">
-              <caret line="95" column="1" lean-forward="false" selection-start-line="95" selection-start-column="1" selection-end-line="95" selection-end-column="1" />
+            <state relative-caret-position="54">
+              <caret line="8" column="13" lean-forward="true" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractEsModel.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AbstractEsModel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Es/AbstractEsModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="29" column="34" lean-forward="true" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+            <state relative-caret-position="163">
+              <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
               <folding>
                 <element signature="e#6#91#0#PHP" expanded="true" />
                 <element signature="e#108#133#0#PHP" expanded="true" />
@@ -75,7 +73,7 @@
         <entry file="file://$PROJECT_DIR$/Es/Res/DemoEsRes.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="288">
-              <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+              <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -91,10 +89,10 @@
       <list>
         <option value="$PROJECT_DIR$/Es/Model/DemoEsModel.php" />
         <option value="$PROJECT_DIR$/Es/Res/DemoEsRes.php" />
-        <option value="$PROJECT_DIR$/demo.php" />
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/Es/AbstractEsRes.php" />
         <option value="$PROJECT_DIR$/Es/AbstractEsModel.php" />
+        <option value="$PROJECT_DIR$/Es/AbstractEsRes.php" />
+        <option value="$PROJECT_DIR$/demo.php" />
       </list>
     </option>
   </component>
@@ -195,12 +193,12 @@
       <workItem from="1557390024561" duration="3173000" />
       <workItem from="1557709694025" duration="641000" />
       <workItem from="1557717059851" duration="2179000" />
-      <workItem from="1591164001587" duration="148000" />
+      <workItem from="1591164001587" duration="249000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9000000" />
+    <option name="totallyTimeSpent" value="9101000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -510,38 +508,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo.php">
+    <entry file="file://$PROJECT_DIR$/Es/AbstractEsModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="163">
+          <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+          <folding>
+            <element signature="e#6#91#0#PHP" expanded="true" />
+            <element signature="e#108#133#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Es/Res/DemoEsRes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
-          <caret line="21" column="31" lean-forward="false" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+          <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Es/AbstractEsRes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
-          <caret line="95" column="1" lean-forward="false" selection-start-line="95" selection-start-column="1" selection-end-line="95" selection-end-column="1" />
+        <state relative-caret-position="54">
+          <caret line="8" column="13" lean-forward="true" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Es/AbstractEsModel.php">
+    <entry file="file://$PROJECT_DIR$/demo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="29" column="34" lean-forward="true" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
-          <folding>
-            <element signature="e#6#91#0#PHP" expanded="true" />
-            <element signature="e#108#133#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="342">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
