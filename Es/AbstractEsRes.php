@@ -1,12 +1,12 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: billowton
+ * User: xiangju
  * Date: 2019/4/29
  * Time: 上午11:13
  */
 
-namespace Es;
+namespace XiangjuService\Es;
 
 
 /**
@@ -31,6 +31,7 @@ class AbstractEsRes
 
     protected $resList = [];
     protected $aggregations = [];
+    protected $aggregationsSrc;
 
 
 
@@ -47,6 +48,7 @@ class AbstractEsRes
         }
 
         if(isset($source['aggregations'])){
+            $this->aggregationsSrc = $source['aggregations'];
             $this->aggregations['list'] = $source['aggregations']['res_list']['buckets'];
             $this->aggregations['count'] = $source['aggregations']['res_count']['value'];
             if($useGroup){
@@ -67,6 +69,12 @@ class AbstractEsRes
     {
         return $this->aggregations;
     }
+
+    public function getAggregationsSrc()
+    {
+        return $this->aggregationsSrc;
+    }
+
 
     public function getTotal()
     {
